@@ -6,9 +6,7 @@ app.use(cors());
 
 app.get('/api', (req, res) => {
     res.json({
-        date: new Date().toLocaleString('pt-BR', {
-            timeZone: 'America/Sao_Paulo'
-        }),
+        date: new Date().toLocaleString('pt-BR'), 
         status: "API no Render funcionando!"
     });
 });
