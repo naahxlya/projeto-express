@@ -4,9 +4,11 @@ import cors from 'cors';
 const app = express();
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.json({
-        date: new Date().toLocaleString('pt-BR'),
+        date: new Date().toLocaleString('pt-BR', {
+            timeZone: 'America/Sao_Paulo'
+        }),
         status: "API no Render funcionando!"
     });
 });
