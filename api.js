@@ -4,7 +4,7 @@ import cors from 'cors';
 const app = express();
 app.use(cors());
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
     res.json({
         date: new Date().toLocaleString('pt-BR'), 
         status: "API no Render funcionando!"
