@@ -4,9 +4,10 @@ import cors from 'cors';
 const app = express();
 app.use(cors());
 
-app.get('/', (req, res) => {
+// rota da API
+app.get('/api', (req, res) => {
     res.json({
-        date: new Date().toLocaleString('pt-BR'), 
+        date: new Date().toISOString(), // data neutra (correto)
         status: "API no Render funcionando!"
     });
 });
